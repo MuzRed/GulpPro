@@ -1,0 +1,18 @@
+.serviceItem {
+  &__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #ccc;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}

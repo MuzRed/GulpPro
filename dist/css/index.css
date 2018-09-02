@@ -1,0 +1,15 @@
+.serviceItem__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: #ccc; }
+
+.serviceItem__title {
+  font-size: 18px;
+  text-transform: uppercase; }
+
+.serviceItem__text {
+  text-align: center; }
+
+.heading {
+  color: red; }
