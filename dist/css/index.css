@@ -13,4 +13,7 @@
   text-align: center; }
 
 .heading {
-  color: red; }
+  color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }

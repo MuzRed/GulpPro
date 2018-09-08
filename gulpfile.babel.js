@@ -4,12 +4,16 @@ import gulp from 'gulp';
 import sass from 'gulp-sass';
 import pug from  'gulp-pug';
 import { create } from 'browser-sync';
+import plumber from 'gulp-plumber';
+import imagemin from 'gulp-imagemin';
+import autoprefixer from 'gulp-autoprefixer';
 
 const browserSync = create();
 
 const config = {
   server: "./dist",
   tunnel: false,
+
   host: "localhost",
   port: 3000,
   logPrefix: "simple-gulp",
@@ -21,6 +25,9 @@ const config = {
 gulp.task('sass', () => {
   return gulp.src('./src/styles/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 4 version']
+    }))
     .pipe(gulp.dest('./dist/css'));
 });
 
@@ -34,6 +41,8 @@ gulp.task('pug', () => {
 
 gulp.task('img', () => {
   return gulp.src('./src/**/*.{jpg,jpeg,png,svg}')
+    .pipe(plumber())
+    .pipe(imagemin())
     .pipe(gulp.dest('./dist/img'));
 });
 
