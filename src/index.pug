@@ -8,8 +8,13 @@ html(lang="en")
     title Document
   body
     h1.heading Hello World !
+      
+    - var user = "Danny Ocean"; 
     p.text
-      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, aliquam!
+      | Lorem #{user} dolor sit amet consectetur adipisicing elit. Corrupti, aliquam!
       | Lorem ipsum dolor sit amet.
+    
+    
+          
      
     include ./blocks/ourServiceItem.pug
